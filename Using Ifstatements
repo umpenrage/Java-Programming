@@ -1,0 +1,13 @@
+import java.util.*;
+
+public class ifstatment {
+	public static void main(String[] arg){
+		int test = 10;
+		if(test == 9 || test >= 9){ 
+			System.out.println("Turtles are awesome :/");
+		} else { 
+			System.out.println("I like dogs");
+		}
+		
+}
+}
