@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Whileloop {
+
+	public static void main(String[] args) {
+		/*While loop allows for you to execute a certain code for multiple times automatically.
+		 * Saves time. 
+		 *The while() contains a condition that has to be met. Once 
+		 *the condition is met, then the loop stops. 
+		 * 
+		 */
+	
+		int counter = 0;
+			while(counter < 10){
+				System.out.println(counter);
+				counter++;
+			}
+	}
+}
