@@ -1,0 +1,20 @@
+  import java.util.*;
+
+public class increment {
+
+	public static void main(String[] args) {
+		Scanner mark = new Scanner(System.in);
+		
+		int tuna = 5;
+		int bass = 18;
+		//Pre-increment ++tuna changes the value of the variable before using the variable//
+		System.out.println(++tuna);
+		System.out.println(tuna);
+		
+	}
+/* tuna++/-- is post-incrementing. Post-increment changes the variable after the JVM uses the variable.
+ * if we were to change line 10 from --/++tuna to tuna++/--, then the with the current code JVM would output 5. However,
+ * if we were to print it out again, then we would get 6. We can also use the assignment operator "=" to add and subtract numbers from each other
+ * Ex. tuna += 8 <---> tuna = tuna +8 
+ */
+}
