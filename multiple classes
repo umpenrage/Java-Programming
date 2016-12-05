@@ -1,0 +1,29 @@
+
+public class multipleclasses {
+
+	public static void main(String[] args) {
+		/* When using a different class within the main, name the class first
+		 * (This is sort of like declaring a variable) along with giving it a new name.
+		 * Ex. is below. Type "new" and then the class name with parenthesis for different functions
+		 *  In order to use the method contained in the tuna class, we need to use the "." operator.
+		 *  Sometimes there are multiple methods contained within one class. 
+		 */
+		tuna tunaobject = new tuna();
+			tunaobject.simplemessage();
+	}
+
+}
+
+
+The other class that is used in the above example.
+
+
+public class tuna {
+	public void simplemessage(){
+		System.out.println("This is another class");
+	}
+}
+/* running this program will not produce an output. JVM looks for
+ * "public static void main()" when running a program class. Without the "main" JVM does
+ * not run the code. This allows for the usuage of multiple classes. 
+ */
