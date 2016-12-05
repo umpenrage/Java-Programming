@@ -8,8 +8,8 @@ public class multipleclasses {
 		 *  In order to use the method contained in the tuna class, we need to use the "." operator.
 		 *  Sometimes there are multiple methods contained within one class. 
 		 */
-		tuna tunaobject = new tuna();
-			tunaobject.simplemessage();
+		tuna tunaObject = new tuna();
+			tunaObject.simplemessage();
 	}
 
 }
@@ -27,3 +27,40 @@ public class tuna {
  * "public static void main()" when running a program class. Without the "main" JVM does
  * not run the code. This allows for the usuage of multiple classes. 
  */
+// This allows for division of work //
+
+//Another example that is not main//
+public class multipleclasses {
+
+	public static void main(String[] args) {
+		/* When using a different class within the main, name the class first
+		 * (This is sort of like declaring a variable) along with giving it a new name.
+		 * Ex. is below. Type "new" and then the class name with parenthesis for different functions
+		 *  In order to use the method contained in the tuna class, we need to use the "." operator.
+		 *  Sometimes there are multiple methods contained within one class. 
+		 */
+		Whileloop loopObject = new Whileloop();
+			loopObject.counter();
+	}
+
+}
+
+import java.util.*;
+
+public class Whileloop {
+
+
+		/*While loop allows for you to execute a certain code for multiple times automatically.
+		 * Saves time. 
+		 *The while() contains a condition that has to be met. Once 
+		 *the condition is met, then the loop stops. 
+		 */
+	public void counter (){
+		int counter = 0;
+			while(counter < 10){
+				
+				System.out.println(counter);
+				counter++;}
+}
+	
+}
