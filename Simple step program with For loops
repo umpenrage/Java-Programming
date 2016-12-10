@@ -1,0 +1,16 @@
+ import java.util.*;
+
+public class forloops {
+	 
+	public static void main(String[] args){
+		double counter = 0 ;	
+		for(counter = 1; counter <= 10; counter += 1){
+			System.out.println(counter);
+		
+			if(counter < 10){
+				System.out.println("You haven't made it to 10 yet");
+			} else{ System.out.println("It took " + counter/2 + " times to reach 10");
+			}
+		}
+	
+	}
