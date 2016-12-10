@@ -3,8 +3,8 @@ import java.util.*;
 public class forloops {
 	 
 	public static void main(String[] args){
-		double counter = 0 ;	
-		for(counter = 0; counter <= 10; counter += 2.3){
+		
+		for(double counter = 0; counter <= 10; counter += 2.3){
 			System.out.println(counter);
 		
 			if(counter < 10){
