@@ -18,7 +18,7 @@ public class forloops {
 			}
 			
 			 else {
-				 System.out.println("It took " + counter/2 + " times to reach 10");
+				 System.out.println("It took " + counter/2.3 + " times to reach 10");
 			} 
 			}		
 		
