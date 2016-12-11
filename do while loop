@@ -1,0 +1,22 @@
+
+public class dloop {
+
+	public static void main(String[] args) {
+		int counter = 0;
+		
+		do {
+			System.out.println(counter);
+			counter++;
+			
+		}while(counter <= 10);
+/* The do while loop is different from the while loop in that it runs the program
+ * first, and then checks the condition. If we were to change counter to 11
+ * the program would print out the counter, then check to see what the counter equals. 
+ * Since the counter is not less than or equal to 10, the program will not loop. 
+ * If you want to test something first, then you should use a while loop. 
+ * If you just want the code to run first and then check a certain condition, then use 
+ * a do while loop.
+ */
+	}
+
+}
