@@ -1,0 +1,21 @@
+import java.util.*;
+public class mathclass {
+
+	public static void main(String[] args) {
+		Random dice = new Random();
+		
+		int number;
+		
+		for( int counter = 1; counter <= 10; counter++){
+		/* Counter is declared within the for argument statement.
+		*
+		*/
+			number = 1 +dice.nextInt(6); 
+			/*Adding 1 to the dice object prevents zero from showing up.
+			 * Java's numbers starts at 0. 
+			 * 
+			 */
+			System.out.println(number + " ");
+			}
+	}
+}
