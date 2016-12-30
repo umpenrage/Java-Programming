@@ -1,0 +1,25 @@
+public class javaLesson{ 
+public static void main(String[] args) 
+  {  
+  int i= 1;  
+  while(i <= 20)  
+    {    
+            if( i == 3)    
+            {     i+=2;     // checks to see if i = 3. If i = 3, then i is iterated by +2. I is then stored as i=5 //
+                  continue;   
+            }    
+            if((i%2)==0)    /* Checks to see if there is a remainder. If there is a remainder, then the numbers are iterated by +1
+            {                 * This causes the output to only produce odd #s. Changing "==0" to >0 would yield an output of even #s 
+                             */
+                 
+                  i++;  
+            }      
+            if(i>10)  /* Breaks the loop after i > 10 */  
+            {     
+              break;  
+            }   
+    System.out.println(i);      //After checking all the above statements, i is iterated by +1//
+    i++; 
+      }
+  } 
+ }
