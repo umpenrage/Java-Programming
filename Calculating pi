@@ -1,1 +1,26 @@
+public class javaLesson{ 
 
+	public static void main(String[] args) 
+	{  
+		double myPi= 4;  
+		double j= 3.0; 
+		// calculating pi is an infinite series = 4 - 4/3 +4/5 +4/7 ....//   
+			while(j<20)   
+			{    
+  			  if(j >19)        
+          {          
+           System.out.println("The final approximation is :" + myPi); 
+          }       			
+ 
+        myPi= myPi - (4/j) + (4 / (j+2));    // the value of j is not iterated by 
+				j+=4;    
+				
+				if(j >10)    
+				{     
+					System.out.println("The final approximation is :" + myPi);    
+				}       
+			}  
+		System.out.println("The real value is : " + Math.PI+ ".\n"  + "This approximation was produced using " + j % 4+" iterations");    
+	} //not really sure if the calculations are correct in regards to the iterations statement.//    
+
+}
