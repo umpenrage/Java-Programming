@@ -1,0 +1,23 @@
+import java.util.*;\
+public class methodss
+  {  
+    static double myPi= 3.14159; //class variable; Can be accessed everywhere 
+      public static void main(String[] args) 
+        {   //accessModifier static  returnType methodName (parameters)  /* Whenever you defining a method, static is used when you want to be able to execute a method that is not part of a Class definition.  */  
+            addThem(1,2);// Printed first because the method 'addThem' is called through the statement 'addThem(1,2)'  
+            System.out.println("Global " + myPi);
+        }   
+        
+              public static int addThem(int a, int b)
+              {   double smallPI = 3.140; // local variable because it is only accessible under the addThem method. The value can be passed out, but it is not accessible globally.
+                                          // Cannot be used in main; however, other classes can call "methodss" and use this method to add integers together   
+                                          // what used to be here → double myPi= 3.0; 
+                                          // Will overwrite the Class value within the method   
+                  myPi = myPi +3.0; //What happens here is the global variable is used and altered.        
+                                    // ↓→ Previously the 'double myPi' didn't  change 'myPi' globally because using 'double' within the 'addThem' method declared a local variable, i.e. 'myPi'. By removing the 'double', the method 'addThem' is using the Global Variable 'myPi'.       
+                                    //  ↓→ The value 'myPi' is changed because the method 'addThem' is called first. If the method 'addThem' were called last, then the value the outputs would not equal each other.    
+                  System.out.println("local " + myPi);     
+                  return 1;  // We need  a return because we stated that the return type was "int". why 1? We could have used any # because we do not care about the return value. 
+                             // If we cared about the return value, then we would state a specific value to be returned. 
+               }
+ }
