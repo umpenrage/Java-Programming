@@ -1,26 +1,27 @@
-public class javaLesson{ 
 
-	public static void main(String[] args) 
-	{  
-		double myPi= 4;  
-		double j= 3.0; 
-		// calculating pi is an infinite series = 4 - 4/3 +4/5 +4/7 ....//   
-			while(j<20)   
-			{    
-  			  if(j >19)        
-          {          
-           System.out.println("The final approximation is :" + myPi); 
-          }       			
- 
-        myPi= myPi - (4/j) + (4 / (j+2));    // the value of j is not iterated by 
-				j+=4;    
+
+ public class pi{ 
+  
+	public static void main(String[] args) 
+	{  	int i = 1;
+		double myPi= 4;  
+ 		double j= 3.0; 
+ 		// calculating pi is an infinite series = 4 - 4/3 +4/5 +4/7 ....//   
+ 		while(j<20)   
+ 			{    
+  			  	
+  
+ 				myPi= myPi - (4/j) + (4 / (j+2));    // the value of j is not iterated by 
+				j+=4;
+				i++;
+				System.out.println("For iteration "+ i+ "\n" +"The  approximation is :" + myPi );
 				
-				if(j >10)    
-				{     
-					System.out.println("The final approximation is :" + myPi);    
-				}       
-			}  
-		System.out.println("The real value is : " + Math.PI+ ".\n"  + "This approximation was produced using " + j % 4+" iterations");    
-	} //not really sure if the calculations are correct in regards to the iterations statement.//    
-
-}
+			}  
+ 		System.out.println("\n The real value is : " + Math.PI+ ".\n"  + "This approximation was produced using " + i +" iterations");    
+ 	} //not really sure if the calculations are correct in regards to the iterations statement.//    
+	/* I figured out a way to calculate the iterations. I thought at first to use the modulus statement using 'j % 4'. 
+	* I thought this would give me the correct iterations because completion of the loop had j iterate +4. I felt this would 
+	* give me the correct iterations because the modulus gives an integer. I see now that was a dumb idea because a division remainder can be any number.
+	* The proper way to calculate iterations is using an incremental variable. To show this incrementation I used the variable 'i'.
+	*/
+ }
