@@ -14,10 +14,12 @@
  				myPi= myPi - (4/j) + (4 / (j+2));    // the value of j is not iterated by 
 				j+=4;
 				i++;
-				System.out.println("For iteration "+ i+ "\n" +"The  approximation is :" + myPi );
+				
 				
 			}  
- 		System.out.println("\n The real value is : " + Math.PI+ ".\n"  + "This approximation was produced using " + i +" iterations");    
+ 		System.out.println("The final approximation is " + myPi);
+ 		System.out.println("The approximation took " + i + " loops to compute.");
+ 		System.out.println("\nThe real value is : " + Math.PI);    
  	} //not really sure if the calculations are correct in regards to the iterations statement.//    
 	/* I figured out a way to calculate the iterations. I thought at first to use the modulus statement using 'j % 4'. 
 	* I thought this would give me the correct iterations because completion of the loop had j iterate +4. I felt this would 
