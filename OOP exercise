@@ -27,7 +27,7 @@ public String name = "Big Monster";
       alive = false;
       }  
     }  
-    public void setHealth(double decrease)
+    public void setHealth(double decreaseHealth)
     {
     int intDecreaseHealth = (int) decreaseHealth;
     health = health -intDecreaseHealth;
