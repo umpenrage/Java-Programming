@@ -7,7 +7,8 @@ public class Whileloop {
 		 * Saves time. 
 		 *The while() contains a condition that has to be met. Once 
 		 *the condition is met, then the loop stops. 
-		 * 
+		 *in order to eventually end the loop and increment variable is needed. Hence we use 'counter++'. This adds 1 to the variable
+		 *'counter'.
 		 */
 	
 		int counter = 0;
