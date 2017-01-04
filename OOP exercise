@@ -7,17 +7,20 @@ private int movement = 2;  
 private int xPostion = 0;  
 private int yPosition = 0;  
 private boolean alive = true;  
-public String name = "Big Monster";
+public String name = "Big Monster"; // private → The member/variable can only be accessed inside its written class. 
+                                    // private prevents others from changing the state of the object. From int to double, or something along those lines. 
+                                    // It makes tracking down bugs easier, and also cuts down on the reliance of a single class.
   public int getAttack()  
-  {    return attack;
+  {    
+    return attack; // gets attack value. 
   }   
   public int getMovement()
   {   
-  return movement;
+    return movement; // gets movement value
   }
   public int getHealth()
   {
-  return health;
+    return health; // obtains the health value.
   }  
     public void setHealth(int decreaseHealth)
     {
@@ -27,7 +30,9 @@ public String name = "Big Monster";
       alive = false;
       }  
     }  
-    public void setHealth(double decreaseHealth)
+    
+    public void setHealth(double decreaseHealth) // Overloaded method: Same method with different attribute, i.e double, 
+                                                 // Allows for the passing of decimals into the health variable.
     {
     int intDecreaseHealth = (int) decreaseHealth;
     health = health -intDecreaseHealth;
@@ -36,7 +41,8 @@ public String name = "Big Monster";
       alive = false;
       }
     }
-      public Monster(int newHealth, int newAttack, int newMovement)
+      public Monster(int newHealth, int newAttack, int newMovement) // Constructor→ setup function that run first, and only ran once.
+                                                                    // needs the same name as the class. 
       {
       health = newHealth;
       attack = newAttack;
