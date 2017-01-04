@@ -9,7 +9,7 @@ private int yPosition = 0;  
 private boolean alive = true;  
 public String name = "Big Monster"; // private → The member/variable can only be accessed inside its written class. 
                                     // private prevents others from changing the state of the object. From int to double, or something along those lines. 
-                                    // It makes tracking down bugs easier, and also cuts down on the reliance of a single class.
+                                    // It makes tracking down bugs easier, and also cuts down on the reliance of a single class. 
   public int getAttack()  
   {    
     return attack; // gets attack value. 
@@ -41,14 +41,16 @@ public String name = "Big Monster"; // private → The member/variable can only 
       alive = false;
       }
     }
-      public Monster(int newHealth, int newAttack, int newMovement) // Constructor→ setup function that run first, and only ran once.
-                                                                    // needs the same name as the class. 
-      {
-      health = newHealth;
-      attack = newAttack;
-      movement = newMovement;
+      public Monster(int newHealth, int newAttack, int newMovement) // Constructor→ setup function that run first, and only ran once per object → no void statement.
+                                                                    // needs the same name as the class. Constructor matches the blueprint of the parent class. We can change the initial values of the variables 
+                                                                    // you can exclude the 'int' by using the 'this.health'  within the constructor. 
+      { 
+        this.health = newHealth;      //health = newHealth;
+        this.attack = newAttack;      //attack = newAttack;
+        this.movement = newMovement   //movement = newMovement;
       }  
       public Monster() // default constructor → is an empty set; No instructions.
+                      // we can overload constructors. 
       {
       }    
       
