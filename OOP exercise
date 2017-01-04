@@ -72,4 +72,5 @@ public String name = "Big Monster"; // private → The member/variable can only 
           * 
            *}
            */
-}
+} // whenever you want to make a new class, create a new file(text file) that contains the new class.
+// to obtain private variables use the 'get.' in another class.  
