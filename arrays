@@ -3,7 +3,7 @@ public class apples
       public static void main(String[] args)//all arrays are objects
       {
         int[] bucky = new int[10];// 'new int[]' requires an number to be inside the []
-        //each array has an index(i,j)
+        //each array has an index(i,j); index always starts at 0.
         
         bucky[0] = 87; //states i=0 is 87
         bucky[1] = 90;
@@ -11,9 +11,14 @@ public class apples
         system.out.println(bucky[1]);
         }
             //Obviously it would not be convenient to type all the elements in an array because what if you get an array of 50000 elements?
-        //array initializer
         
-        //int[] bucky = {2,4,7,9}; using this method is easier than the previous method but it is still not convenient. 
+        //array initializer example
+        
+        //int[] bucky = {2,4,7,9}; the array initializer method is easier than the previous method but it is still not convenient. 
+        
+        //multidimensional arrays
+        
+        //int[][] marks = new int[2][3]; means that there is the parent array that has 2 boxes, and within those boxes there are 3 arrays each. 
     
           
     
