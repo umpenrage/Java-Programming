@@ -1,0 +1,35 @@
+import java.util.*;
+public class ComputeLoan {
+
+	public static void main(String[] args) {
+		// This program will calculate loan payments per month
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter Annual interest rate, e.g., 8.0:" );
+		double annualInterestRate = input.nextDouble();
+		
+		//obtains monthly interest rate
+		double monthlyInterestRate = annualInterestRate/1200;//Dividing the percentage amount by 100 and 12 is that same as dividing by 1200
+		
+		//enter the # of years
+		
+		System.out.println("Please enter the # of years :");
+		
+		int numOfyears = input.nextInt();
+		
+		System.out.println("Enter loan amount, e.g., 1200.95");
+		double loanAmount = input.nextDouble();
+		
+		//Payment calculation
+		double monthlyPayment = loanAmount*monthlyInterestRate/(1 - (1/Math.pow(1 + monthlyInterestRate, numOfyears*12)));
+
+		//Total payment
+		double totalPayment = monthlyPayment*numOfyears*12;
+		
+		//displays results
+		
+		System.out.println("The monthly payment is $" + (int)(monthlyPayment*100)/100.0);
+		System.out.println("The total payment is $" + (int)(totalPayment*100)/100.0);
+	}
+}
