@@ -1,0 +1,28 @@
+ import java.util.Scanner; // Scanner is in the java.util package public class 
+ ComputeAreaWithConsoleInput
+ {  
+  public static void main(String[] args)
+  {       // Create a Scanner object    
+          Scanner input = new Scanner(System.in);
+          // Prompt the user to enter a radius
+          System.out.print("Enter a number for radius: ");
+          double radius = input.nextDouble();
+          // Compute area
+          double area = radius * radius * 3.14159;
+          // Display results
+          System.out.println("The area for the circle of radius " +  radius + " is " + area); 
+   }
+ }
+ 
+ 
+ Please enter a number for the radius : Exception in thread "main" java.util.
+ NoSuchElementException at java.util.Scanner.throwFor(Scanner.java:862) 
+ at java.util.Scanner.next(Scanner.java:1485)
+ at java.util.Scanner.nextDouble(Scanner.java:2413)
+ at ComputeArea.main(ComputeArea.java:11)
+ 
+ 
+ 
+ 
+ 
+ 
