@@ -1,0 +1,16 @@
+import java.util.*;
+public class VolumeCylinder
+{  
+  public static void main(String[] args)
+  { 
+    Scanner input = new Scanner(System.in);
+    System.out.println("This program will calculate the volume of a Cylinder, and is rounded off to 2 decimal places.\n!!!!Before inputting any numbers, examine the unit of measurement because you might have to convert!!!");
+    System.out.print("Please input the length(without indicating the units) : ");
+    double length = input.nextDouble();
+    System.out.println("Please input the radius(without indicating the units) : ");
+    double radius = input.nextDouble();
+    double area = radius*radius*Math.PI;
+    double volume = area * length;
+    System.out.println("The volume is " + (int)(volume*100)/100.0 + "\n!!!Before turning in your homework, please include the unit of measurement!!!");
+    }
+ }
