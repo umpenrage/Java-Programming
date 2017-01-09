@@ -33,8 +33,14 @@ public class ComputeLoan {
 		
 		//displays results
 		
-		System.out.println("The monthly payment is $" + (int)(monthlyPayment*100)/100.0);
-		System.out.println("The total payment is $" + (int)(totalPayment*100)/100.0);
-		System.out.println("The total interest paid is $" + (int)(totalInterest*100)/100.0);
+		System.out.println("The monthly payment is $" + (int)(monthlyPayment*100)/100.0); 	*/The reason for the '*100/100.0' is 
+		System.out.println("The total payment is $" + (int)(totalPayment*100)/100.0);	   	* because the at java uses the order of operations 
+												    	* the '*100' in the second parathesis moves
+		System.out.println("The total interest paid is $" + (int)(totalInterest*100)/100.0);	* the decimal place out 2 places and 
+												    	* then cuts off the rest because of the '(int)'
+												    	* command. Then we divide by '100.0' to change the number
+												    	* back to double. This allows us to have 2 decimal points of accuracy.
+												    	* which is the most accurate for money. 
+												    	/*
 	}
 }
