@@ -1,0 +1,19 @@
+import java.util.*;
+
+
+public class FeetMeters
+{
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Please input the ft. measurement in order to convert it to meters :");
+		double foot = input.nextDouble();
+		double meters = foot*0.305;
+		System.out.println(foot + " ft is equal to " + (int)(meters*1000)/1000.0 + " meters");
+		
+	}
+		
+
+
+}
