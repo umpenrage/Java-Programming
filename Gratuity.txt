@@ -1,0 +1,54 @@
+﻿import java.util.*;
+
+public class calGratuity{
+
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		System.out.print("This program will calculate gratuity for a meal\n");
+		System.out.println("Please input the amount owed:");
+		
+		double bill = input.nextDouble();
+		
+		System.out.println("Please select the amount of gratuity: 10, 15, 20 percent :");
+		
+		int gratuity = input.nextInt();
+		
+			double grat = gratuity/100.0;		
+			double gratAmt = bill*grat;
+			double total = (int)((gratAmt + bill)*100)/100.0;
+			switch(gratuity) 
+			{
+			
+			case 10:				
+					System.out.println("The bill is $" + bill +" and the total gratuity amount is $" + gratAmt +"\nThe total is $" + total + " with a " + gratuity + "% gratuity"); 
+					break;
+			case 15: 	
+					System.out.println("The bill is $" + bill +" and the total gratuity amount is $" + gratAmt +"\nThe total is $" + total + " with a " + gratuity +"% gratuity"); 
+					break;
+			case 20: 	
+					System.out.println("The bill is $" + bill +" and the total gratuity amount is $" + gratAmt +"\nThe total is $" + total + " with a " + gratuity + "% gratuity");
+					break;  
+			default: 	
+					System.out.println("You have decided to give a different % gratiuty");
+					System.out.print("The bill is $" + bill +" and the total gratuity amount is $" + gratAmt +"\nThe total is $" + total + " with a " + gratuity + "% gratuity"); 
+					break;
+				
+			}
+		
+		
+	
+	
+	
+	
+	}
+
+
+
+
+
+
+
+
+
+}
