@@ -21,13 +21,13 @@ public class calGratuity{
 			{
 			
 			case 10:				
-					System.out.println("The bill is $" + bill +" and the total gratuity amount is $" + gratAmt +"\nThe total is $" + total + " with a " + gratuity + "% gratuity"); 
+					System.out.println("The bill is $" + bill +" and the total gratuity amount is $" + gratAmt +"\nThe total is $" + total + " with a 10% gratuity"); 
 					break;
 			case 15: 	
-					System.out.println("The bill is $" + bill +" and the total gratuity amount is $" + gratAmt +"\nThe total is $" + total + " with a " + gratuity +"% gratuity"); 
+					System.out.println("The bill is $" + bill +" and the total gratuity amount is $" + gratAmt +"\nThe total is $" + total + " with a 15% gratuity"); 
 					break;
 			case 20: 	
-					System.out.println("The bill is $" + bill +" and the total gratuity amount is $" + gratAmt +"\nThe total is $" + total + " with a " + gratuity + "% gratuity");
+					System.out.println("The bill is $" + bill +" and the total gratuity amount is $" + gratAmt +"\nThe total is $" + total + " with a 20% gratuity");
 					break;  
 			default: 	
 					System.out.println("You have decided to give a different % gratiuty");
