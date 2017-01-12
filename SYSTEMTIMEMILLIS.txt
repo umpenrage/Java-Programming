@@ -6,7 +6,7 @@ public class AddQuiz
 
 	public static void main(String[] args)
 	{
-		int number1 = (int)(System.currentTimeMillis()%10);
+		int number1 = (int)(System.currentTimeMillis()%10); //the System.currentTimeMillis() command generates the milliseconds of the current time, and this generates a number that can be used for calculations. In this case, it is used to generate a random number. 
 		int number2 = (int)(System.currentTimeMillis()/7%10); 
 		
 		Scanner input = new Scanner(System.in);
