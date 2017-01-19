@@ -1,0 +1,47 @@
+import java.util.*;
+
+public class quadForm
+{
+	static Scanner input = new Scanner(System.in);
+	public static void main(String[] args)
+	{
+		String contYorN = "Y";
+
+		while(contYorN.equalsIgnoreCase("y"))
+		{
+
+			System.out.println("This program will calculate the roots for a quadratic equation");
+			System.out.print("Please input the constants in the following order(without the commas)' a, b, c ' .\nUse the following as a reference : ax^2 +bx+c = 0");
+			System.out.print(":");
+			double a = input.nextDouble();
+			double b = input.nextDouble();
+			double c = input.nextDouble();
+			double discrim = Math.pow(b,2)-(4*a*c);
+			if (discrim < 0)
+			{
+				System.out.println("There are not any real roots");
+
+			}
+			else
+			{
+				double rt1 =(int)((-b + Math.pow(discrim,.5))*1000)/(1000.0*2*a);
+				double rt2 =(int)((-b - Math.pow(discrim,.5))*1000)/(1000.0*2*a);
+				System.out.println("The real roots are " +rt1 + " " +rt2 + "\n");
+			}
+
+			System.out.println("Would you like to use this program again? Please type 'y' or 'n' : ");
+
+                        contYorN = input.next(); /* I fixed this issue by using .next() instead of nextLine()
+                                                    I'm still unsure as to why this change fixed the problem of the program
+                                                    ending after the print statement.
+                                                 */
+
+
+
+
+		}
+
+
+
+	}
+}
