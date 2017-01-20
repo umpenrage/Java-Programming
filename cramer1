@@ -1,0 +1,41 @@
+import java.util.*;
+
+public class cramer
+{
+	
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		ystem.out.println("The for a 2 x 2 linear system, equations follow the patterns : \n(1st equation) ax + by= e, (2nd equation) cx + dy = f);
+		System.out.println("Please enter a, b , c , d , e , f : ");
+		double a = input.nextDouble();
+		double b = input.nextDouble();
+		double c = input.nextDouble();
+		double d = input.nextDouble();
+		double e = input.nextDouble();
+		double f = input.nextDouble();
+	
+		if( ad-bc == 0 )
+		{
+			System.out.println("The equation has no solution");
+		
+		
+		}
+		else
+		{
+		
+			double x = (ed-bf)/(ad-bc);
+			double y = (af - ec)/(ad - bc);
+			
+			System.out.println(" x = " + (int)(x*100)/100.0 + " y = " + (int)(y*100)/100.0);
+		
+		
+		
+		}
+	
+	
+	}
+
+
+
+}
