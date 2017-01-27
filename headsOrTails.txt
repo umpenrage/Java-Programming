@@ -1,0 +1,89 @@
+import java.util.*;
+public class Main
+{
+  
+  
+  public static void main(String[] args)
+  { 
+    String random1;
+    Scanner input = new Scanner(System.in);
+    
+   
+    
+    Boolean answer = true;
+    double count = 0;
+    double timesPlayed = 0;
+    while(answer)
+    { 
+      int random = (int)(Math.random()*2);
+      if(random == 0)
+      {
+        random1 = "heads";
+      }
+      
+      else
+      
+      {
+        
+       random1 = "tails"; 
+        
+      }
+      System.out.print("Take a guess, heads or tails");
+      String answer1 = input.nextLine();
+     
+      if(answer1.equalsIgnoreCase(random1))
+      
+      {
+        
+        System.out.println("You guessed right");
+        count++;
+        
+        
+      }
+      
+      else
+      
+      {
+        System.out.println("You guessed wrong!");  
+        
+      }
+    
+      timesPlayed++;
+	  
+	  System.out.println("Would you like to play again? Yes or no");
+	  String answer3 = input.nextLine();
+	  if(!(answer3.equalsIgnoreCase("yes") || answer3.equalsIgnoreCase("no")))
+	  {
+		Boolean retry = true;
+		  while(retry)
+		  {
+		
+			System.out.println("You gave an incorrect answer, would you like to close the program? Yes or no?");
+			String answer4 = input.nextLine();
+			if(answer4.equalsIgnoreCase("yes") || answer4.equalsIgnoreCase("y"))
+			{
+				retry = false;
+				answer = false;
+				System.out.println("Thanks for playing!");
+		    System.out.println("You were correct " + count + " Times out of " + timesPlayed + " questions\n The percentage of correct answers is " + (int)((count/timesPlayed)*100.0)+ "% !");
+			}
+			else if(answer4.equalsIgnoreCase("no") || answer4.equalsIgnoreCase("n"))
+			{
+				retry = false;
+			}
+			
+		}
+	  
+	  }
+	  else if(answer3.equalsIgnoreCase("no") || answer3.equalsIgnoreCase("n"))
+	  {
+		answer = false;
+		System.out.println("Thanks for playing!");
+		System.out.println("You were correct " + count + " Times out of " + timesPlayed + " questions\n The percentage of correct answers is " + (int)((count/timesPlayed)*100.0)+ "%!");
+	  }
+	  
+	  
+    }
+  }
+  
+}  
