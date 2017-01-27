@@ -1,0 +1,98 @@
+import java.util.*;
+
+ public class daysAndYears
+ {
+    static Scanner input = new Scanner(System.in);
+	public static void main(String[] args)
+	{
+	  Boolean yOrNo = true;
+	  while(yOrNo)
+	  {
+		  System.out.println("Please Type in the Month & year.\nUse the month number(1 to 12) when inputing data, and use the full year(2015 = 2015) for inputting the year :");
+		  
+		  
+		  int month = input.nextInt();
+		  int year = input.nextInt();
+		  input.nextLine();
+		  
+		  boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+		  
+		    if(isLeapYear && month == 4)
+		    {
+		      
+		      
+		      System.out.println(" The days in the year " + year + " for the month Febuary is 29 days");
+		      
+		    }
+		    
+		    else
+		    {
+		      switch(month)
+		      {
+		        case 1: System.out.println(" The days in the year " + year + " for the month of January is 31 days");
+		        break;
+		        case 2: System.out.println(" The days in the year " + year + " for the month of Febuary is 28 days");
+		        break;
+		        case 3: System.out.println(" The days in the year " + year + " for the month of March is 31 days");
+		         break;
+		        case 4: System.out.println(" The days in the year " + year + " for the month of April is 30 days");
+		         break;
+		        case 5: System.out.println(" The days in the year " + year + " for the month of May is 31 days");
+		         break;
+		        case 6: System.out.println(" The days in the year " + year + " for the month of June is 30 days");
+		         break;
+		        case 7: System.out.println(" The days in the year " + year + " for the month of July is 31 days");
+		         break;
+		        case 8: System.out.println(" The days in the year " + year + " for the month of August is 31 days");
+		         break;
+		        case 9: System.out.println(" The days in the year " + year + " for the month of September is 30 days");
+		         break;
+		        case 10: System.out.println(" The days in the year " + year + " for the month of October is 31 days");
+		         break;
+		        case 11: System.out.println(" The days in the year " + year + " for the month of November is 30 days");
+		         break;
+		        case 12: System.out.println(" The days in the year " + year + " for the month of December is 31 days");
+		         break;
+		        default: System.out.println("The month you have selected is out of the range of 1 to 12, please try again");
+		        break;
+		      }
+		      
+		    }
+		 System.out.println("Would you like to reuse this program? Please type yes or no");
+		 
+		 String reply = input.nextLine();
+		      
+		      if(reply.equalsIgnoreCase("no") || reply.equalsIgnoreCase("n")) 
+		      { 
+		       yOrNo = false;
+		       
+		      System.out.println("The program will now terminate. Thank you for using this program and have a nice day");
+		      }
+		      else if(!(reply.equalsIgnoreCase("yes") || reply.equalsIgnoreCase("y") || reply.equalsIgnoreCase("no") || reply.equalsIgnoreCase("n")))
+		      {
+		        boolean retry = true;
+		        while(retry)
+		        {
+		          System.out.println("You have not selected a correct response. Would you like to reuse this program. Please type yes, y, n or no.");
+		          String reply1 = input.nextLine();
+		          
+		          if(reply1.equalsIgnoreCase("yes") || reply1.equalsIgnoreCase("y"))
+		            {
+		              retry = false; 
+		            }
+		          else if(reply1.equalsIgnoreCase("n") || reply1.equalsIgnoreCase("no"))
+          		{
+          		  System.out.println("Thanks for using the program and have a nice day");
+          		  retry = false;
+          		  yOrNo= false;
+          		}          
+		        }
+		      
+		      }
+		      
+	  }
+		      
+		      
+	
+	}
+ }
