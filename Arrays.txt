@@ -1,0 +1,111 @@
+import java.util.*;
+
+
+public class Arrays
+{
+
+    public static void main(String[] args)
+    {
+        //This will teach you how to use arrays in java
+        
+        int[] randomArray; //Declares integer array with the name 'randomArray'
+        
+        int[] numberArray = new int[10]; /*In order to use an array you must declare the size of the array. 
+                                          This command tells java how big this 1D array will be.    
+                                          */
+//        randomArray = new int[20];         // Tells java how big randomArray is.Once the size is declared
+                                           // it cannot be changed
+        
+//        randomArray[1] = 2;                 /* tells java was the first element of randomArray equals
+//                                                There are multiple methods to fill up an array. 
+//                                                You can use loops(below) or you can us the curly brace
+//                                                 method(See next) or you can specify each element.
+//                                            */
+                                                        
+        String[] stringArray   = {"just", "random", "words"}; // Makes a string array with the words(see curly braces) as the elements of the array
+        
+         
+        //Loop method for filling an array
+        
+        for(int i =0; i < numberArray.length; i++) // this will fill up the array
+                                                   // the array length is 10, so we will get 10 #'s 0-9 as elements
+        {
+            
+             numberArray[i] = i;
+              
+            
+            
+            
+        }
+         
+        //Creates a visual representation of an array. THE ARRAY BELOW IS NOT RELATED TO THE ABOVE
+        //FOR LOOP. 
+        
+        
+        int k = 1;
+        while( k <= 41)
+        {
+           System.out.print('-');
+           k++;
+            
+           
+        }
+        System.out.println();    // creates a space after the while loop completes
+
+        for(int j = 1; j <numberArray.length; j++)// Prints out the array 
+        {
+         // Changing the starting array from 0 to 1 creates a blank space that should read 10.
+         // but because the criteria states less than array length, the space is left blank.
+         // this can be fixed by changing 'j <' to 'j <='
+         System.out.print("| " + j + " "); // PRINTS OUT '| j ' upto the array length
+
+        }
+         System.out.println( "|");  // after the for loop runs, the '|' is added to make
+                                    // the output:
+                                    //  -----------------------------------------
+                                    //  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 (|) ← final '|'
+                                    // look nice. The command creates the final '|' which is 
+                                    // contained within the parenthesis for clarification purposes 
+                                    // Actual output:
+                                    //-----------------------------------------
+                                    //| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+        
+                                    
+                                    
+        //Multidimensional arrays. 1D = Across 2D = Across & Down 3D = Across & Down & Number of sheets
+        
+        //String 
+        String[][] multiArray = new String[10][10]; //Creates a new string array that is 10 across and 10 down.
+        
+        //Filling in the multiple array;
+            for(int i = 0; i < multiArray.length; i++)
+            {
+                 
+                for(int j = 0; j<multiArray[i].length; j++)
+                {
+                    
+                   multiArray[i][j] = i + " " + j;  // places the values of the arrays into their respective row or column
+                    
+                }
+               
+                
+            }
+        
+        
+        
+        
+        
+        
+        
+    }
+
+
+
+
+
+
+
+
+
+    
+}
