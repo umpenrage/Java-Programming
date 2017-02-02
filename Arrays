@@ -136,7 +136,7 @@ public class Arrays
 		}
 		
 		
-	int k = 1; // This loop is only for aesthetic purposes(need to declare k because the above k is commented out) 
+	int k = 1; // This loop is only for aesthetic purposes 
 	while( k <= 61)
     {
 		System.out.print('-'); 
