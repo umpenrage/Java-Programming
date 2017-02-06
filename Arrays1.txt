@@ -1,0 +1,163 @@
+import java.util.*;
+
+
+public class Arrays
+{
+
+    public static void main(String[] args)
+    {
+        //This will teach you how to use arrays in java
+        
+        int[] randomArray; //Declares integer array with the name 'randomArray'
+        
+        int[] numberArray = new int[10]; /*In order to use an array you must declare the size of the array. 
+                                          This command tells java how big this 1D array will be.    
+                                          */
+//        randomArray = new int[20];         // Tells java how big randomArray is.Once the size is declared
+                                           // it cannot be changed
+        
+//        randomArray[1] = 2;                 /* tells java was the first element of randomArray equals
+//                                                There are multiple methods to fill up an array. 
+//                                                You can use loops(below) or you can us the curly brace
+//                                                 method(See next) or you can specify each element.
+//                                            */
+                                                        
+//        String[] stringArray   = {"just", "random", "words"}; // Makes a string array with the words(see curly braces) as the elements of the array
+//        
+//         
+//        //Loop method for filling an array
+//        
+//        for(int i =0; i < numberArray.length; i++) // this will fill up the array
+//                                                   // the array length is 10, so we will get 10 #'s 0-9 as elements
+//        {
+//            
+//             numberArray[i] = i;
+//              
+//            
+//            
+//            
+//        }
+//         
+//        //Creates a visual representation of an array. THE ARRAY BELOW IS NOT RELATED TO THE ABOVE
+//        //FOR LOOP. 
+//        
+//        
+//        int k = 1;
+//        while( k <= 41)
+//        {
+//           System.out.print('-');
+//           k++;
+//            
+//           
+//        }
+//        System.out.println();    // creates a space after the while loop completes
+//
+//        for(int j = 1; j <=numberArray.length; j++)// Prints out the array 
+//        {
+//         // Changing the starting array from 0 to 1 creates a blank space that should read 10
+//         System.out.print("| " + j + " "); // PRINTS OUT '| j ' upto the array length
+//
+//        }
+//         System.out.println( "|");  // after the for loop runs, the '|' is added to make
+//                                    // the output:
+//                                    //  -----------------------------------------
+//                                    //  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 (|) ← final '|'
+//                                    // look nice. The command creates the final '|' which is 
+//                                    // contained within the parenthesis for clarification purposes 
+//                                    // Actual output:
+//                                    //-----------------------------------------
+//                                    //| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+//          //Multidimensional arrays. 1D = Across 2D = Across & Down 3D = Across & Down & Number of sheets
+        
+        //String 						row=i j=col
+        String[][] multiArray = new String[10][10]; //Creates a new string array that is 10 across and 10 down.
+        /*					                                                                         
+		Creates multiarray = { {Column},  {Column},  {Column },  { Column},  {Column },  {Column},  {Column},  {Column},...,  {Column}}	
+                                         ↑ ↑ ↑ ↑											 ↑↑ ↑ ↑↑
+			               First element  →   →   →  → →   →   →  →   →   →   →  →  →  →  →   →  →  →  →  →   →  →  →  →    Last element
+                                       r0= 1st row																					 r9 = last row
+		*/
+        //Filling in the multiple array; This just stores the data, it does not print out anything
+            for(int i = 0; i < multiArray.length; i++) // ←[You can think of the outer loop (i) as moving down the rows of matrix]
+            {
+                
+                for(int j = 0; j<multiArray[i].length; j++) // ←[, then the inner loop (j) moves along each row inputing values until the length of each row is filled.]
+                {	
+					//This loop continue inputting values into each row until j > the row length
+					
+					multiArray[i][j] = i + " " + j; // inputs 'i & j' into each cell created by the two loops. See output
+                  
+
+				  //Not really clear as to how to visualize this statement
+                   /*
+                     Think of this as a matrix(even though it is not really a matrix). The address [0][0] will
+                     contain the values '0(i) 0(j)' when this loop runs for the first time. The [i] represents how many
+                     spaces across to go, and the [j] represents how far down to go. The []'s illustrate the idea
+                     of specifying an address. The actual i & j in the loop are the values injected into that address,
+                     which is denoted by 'i + " " + j'.With the space, the values do not add together, and instead
+                     are outputted as a string. To add them together, just get rid of the argument ' " " '.
+                     This process continues until the row array length is less than 'j'. Once this occurs the condition for the inner loop is met, and the program backs out to the original loop. The condition i<multiArray.length is tested, and if true then the program enters the nested loop. This will continue until i > multiArray.length.
+                   
+				   */
+                    // places the values of the arrays into their respective row or column
+                   // The quotation marks makes the statement a string i believe???
+                   
+                }
+               
+               
+            }
+			
+		int k = 1; // This loop is only for aesthetic purposes(need to declare k because the above k is commented out) 
+		while( k <= 61)
+        {
+          System.out.print('-'); 
+          k++;
+           
+          
+        }
+		System.out.println();
+		
+		//System.out.print(multiArray[i][j]); will only allow you print out a specific cell. The 'i' and 'j' are not recognized because they are out of scope. 
+		
+		for(int i = 0; i< multiArray.length; i++)
+		{
+		
+			for(int j = 0; j < multiArray[i].length; j++)
+			{
+			
+				System.out.print("| " + multiArray[i][j] + " ");
+			
+			
+			}
+			
+			System.out.println("|");
+			
+		
+		}
+		
+		
+	k = 1; // This loop is only for aesthetic purposes 
+	while( k <= 61)
+    {
+		System.out.print('-'); 
+        k++;
+           
+          
+    }
+	 System.out.println();
+	}
+/* Output
+-------------------------------------------------------------
+| 0 0 | 0 1 | 0 2 | 0 3 | 0 4 | 0 5 | 0 6 | 0 7 | 0 8 | 0 9 | ← Notice each cell has two numbers. The first number is i and the second is j.
+| 1 0 | 1 1 | 1 2 | 1 3 | 1 4 | 1 5 | 1 6 | 1 7 | 1 8 | 1 9 | ← This was the output we wanted. The inner for loop stated each cell should have 'i + " " + j.
+| 2 0 | 2 1 | 2 2 | 2 3 | 2 4 | 2 5 | 2 6 | 2 7 | 2 8 | 2 9 | ← We require two loops to out information that we want placed in rows and columns.
+| 3 0 | 3 1 | 3 2 | 3 3 | 3 4 | 3 5 | 3 6 | 3 7 | 3 8 | 3 9 | ← We also need the loops in order to print out the cells. 
+| 4 0 | 4 1 | 4 2 | 4 3 | 4 4 | 4 5 | 4 6 | 4 7 | 4 8 | 4 9 |
+| 5 0 | 5 1 | 5 2 | 5 3 | 5 4 | 5 5 | 5 6 | 5 7 | 5 8 | 5 9 |
+| 6 0 | 6 1 | 6 2 | 6 3 | 6 4 | 6 5 | 6 6 | 6 7 | 6 8 | 6 9 |
+| 7 0 | 7 1 | 7 2 | 7 3 | 7 4 | 7 5 | 7 6 | 7 7 | 7 8 | 7 9 |
+| 8 0 | 8 1 | 8 2 | 8 3 | 8 4 | 8 5 | 8 6 | 8 7 | 8 8 | 8 9 |
+| 9 0 | 9 1 | 9 2 | 9 3 | 9 4 | 9 5 | 9 6 | 9 7 | 9 8 | 9 9 |
+-------------------------------------------------------------
+*/
+}
