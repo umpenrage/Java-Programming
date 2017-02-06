@@ -1,0 +1,51 @@
+import java.util.*;
+
+public class GCF
+{ 
+	
+	
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		System.out.println("This program will calculate the greatest common factor");
+		System.out.println("Input an integer");
+		
+		int n1 = input.nextInt();
+		
+		System.out.println("input a second integer")
+		
+		int n2 = input.nextInt();
+		
+		int gcf = 1; // A looped variable outside of the loop is permanently changed after each execution. 
+
+		
+		int k = 4; 
+		
+			while(k <= n1 && k <= n2)// The greatest common factor is the number that divides into each number evenly
+		
+			{
+		
+				if(n1% k == 0 && n2 % k == 0)
+				{
+				
+					gcf = k;
+				
+				
+				}
+			
+			k++;
+			}
+		System.out.println("The greatest common divisor for " + n1 +" and " + n2 + " is " + gcf);
+		
+	
+	
+	
+	
+	
+	}
+
+
+
+
+
+}
