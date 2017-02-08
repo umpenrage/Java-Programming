@@ -13,19 +13,19 @@ public class Main
 		input.nextLine();
 		for(int outLoop = 1; outLoop <= answer; outLoop++)
 		{
-			for(int innerLoop = answer; innerLoop >= outLoop; innerLoop--)
+			for(int innerLoop = answer; innerLoop >= outLoop; innerLoop--)// we need this to be equal to input because the space are reduced as the pyramid descends
 			{
 				System.out.print("  ");
 			
 			}
-			for(int num = outLoop; num >= 1; num--)
+			for(int num = outLoop; num >= 1; num--) // Need this equal to outer loop because we want all the numbers in to be the same in their respective columns with 1 at the center of pyramid
 			{
 				System.out.print(num + "   ");
 							
 			
 			}
 		
-			for(int num1 = 2; num1 <= outLoop; num1 ++)
+			for(int num1 = 2; num1 <= outLoop; num1 ++) // Num1 needs to be equal to 2 in order to have the columns on the right descend properly 
 			{
 			
 				System.out.print( num1 + "   ");
@@ -33,7 +33,30 @@ public class Main
 			}
 			System.out.println();
 		}
+/*
+	Output for input of 8
+	Please enter an integer: 
+ 		8
+		
+		
+  (This is the 2nd for loop)  ← 1 | 
+                            2   1 |  2   → all columns have the same number(Last for loop) 
+                        3   2   1 |  2   3   
+                    4   3   2   1 |  2   3   4   
+                5   4   3   2   1 |  2   3   4   5   
+            6   5   4   3   2   1 |  2   3   4   5   6   
+        7   6   5   4   3   2   1 |  2   3   4   5   6   7   
+    8   7   6   5   4   3   2   1 |  2   3   4   5   6   7   8   
+	                          ↓
+The barrier separates the	← ↓	
+first two loops from the last loop	
 	
+	
+	
+	
+	
+	
+*/
 	
 	
 	
