@@ -14,7 +14,7 @@ looks like '1'  and it will proceed until the outerloop is equal to 'answer'.
 	  '2 1'
 	  
 	
-The TIL 'for(int num1 = 2; num1 <= outLoop; num1 ++)" starts at 2 because the first part of the pyramid, provided by SIL, provides '1'. This for loop does
+The TIL 'for(int num1 = 2; num1 <= outLoop; num1 ++)' starts at 2 because the first part of the pyramid, provided by SIL, provides '1'. This for loop does
 not run the first time because num1 is greater than outLoop(This means that num1 does not increment). Why not run it and set num1 = 1? Because if we were to run it we would have
 an output that would add an extra column of 1s:
 "
@@ -28,9 +28,27 @@ an output that would add an extra column of 1s:
     8   7   6   5   4   3   2   1   1   2   3   4   5   6   7   8   
 "
 
-We do not want that extra column, so we start this at 2. This loop produces the second part of the pyramid(See output below). Notice
-we do not set num1 to outLoop and instead we use the outLoop in the conditional statement. Why?
+We do not want that extra column containing just 1s, so we start this for loop at 2. This loop produces the second part of the pyramid(See output below). Notice
+we do not set num1 equal to outLoop and instead we use the outLoop in the conditional statement. Why? The reason is we need to have the 
+second part of the pyramid to symmetric with first. Since we start counting at 2, the condition checks to see if num1 is less than outLoop.
+If true, then num1 is incremented until the condition 'num1 <= outLoop' is no longer met. This prints out the ascending numbers, 2 - 8, depending on the condition
+(The FIL is dependent on the answer, thus the output of the TIL is affected). 
 
+
+
+Just a side note, let's say we change num1 = outloop and make the condition 'num1 <=8' with an input of 8. The output would be:
+
+'
+                                1   1   2   3   4   5   6   7   8   
+                            2   1   2   3   4   5   6   7   8   
+                        3   2   1   3   4   5   6   7   8   
+                    4   3   2   1   4   5   6   7   8   
+                5   4   3   2   1   5   6   7   8   
+            6   5   4   3   2   1   6   7   8   
+        7   6   5   4   3   2   1   7   8   
+    8   7   6   5   4   3   2   1   8                                 '
+    
+Great for producing a parallelogram!
 
 
 
@@ -53,7 +71,7 @@ public class Main
 		{
 			for(int innerLoop = answer; innerLoop >= outLoop; innerLoop--)// we need this to be equal to input because the space are reduced as the pyramid descends
 			{
-				System.out.print("  ");
+				System.out.print("    ");
 			
 			}
 			for(int num = outLoop; num >= 1; num--) // Need this equal to outer loop because we want all the numbers in to be the same in their respective columns with 1 at the center of pyramid
