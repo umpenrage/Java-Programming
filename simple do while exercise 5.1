@@ -8,37 +8,48 @@ public class Main
 		{
 				int neg = 0;
 				int pos = 0;
-				double count = 0;
 				Scanner input = new Scanner(System.in);
-				
+				int data=-1;
 				int sum = 0;
-				int data; // variables outside of a loop can be incremented 
-				do
-				{
-					System.out.println("Enter an integer, the input ends if it is 0: ");
-				
-					data = input.nextInt();
-				
-					input.nextLine();
-					if(data <0)
-					{
-						neg++;
-					}
-					else
-					{
-						pos++;
-					}
-					sum+=data;
-					count++;
-					
-				}while(data!=0);
-				double av = sum/count;
-				System.out.printf("The sum is %d and the average is %4.2f.\nThe total negative #'s are %d and the total positive #'s are %d", sum, av, neg, pos );
-		
-		
-		
-		
-		
+				double count = 0;
+		    
+		  
+				  
+				  while(data!=0)
+				  {
+				  	System.out.println("Enter an integer, the input ends if it is 0: ");
+				    data = input.nextInt();
+				    input.nextLine();
+			     
+				  	 if(data <0)
+				  	 { 
+				  		  neg++;
+				  	  }
+				  	
+				  	  else
+				  	  {
+				  	  	pos++;
+				  	  }
+				  	
+				  	  sum+=data;
+				  	  count++;
+			  	 } 
+			
+				    
+  			double av = sum/count; 	//I originally had this declared after 'double count'. This gave me an error message.
+												// The reason is that av was already calculated before the loop began. While count incremented, the variable  
+												// av was static at  NaN(Not a Number). The only thing that reruns is the loop. Everything else prior is not
+												// recalculated.
+  			if(count == 1)
+  			{
+				System.out.print("You have entered 0 as your first initial variable.");  
+  			}
+  			else
+  			{ 
+				System.out.printf("The sum is %d and the average is %4.2f.\nThe total negative #'s are %d.\nThe total positive #'s are %d", sum, av, neg, pos );
+			}
+		  
+		   
 		
 		}
 
