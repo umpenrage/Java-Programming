@@ -37,9 +37,9 @@ public class Main
 			
 				    
   			double av = sum/count; 	//I originally had this declared after 'double count'. This gave me an error message.
-												// The reason is that av was already calculated before the loop began. While count incremented, the variable  
-												// av was static at  NaN(Not a Number). The only thing that reruns is the loop. Everything else prior is not
-												// recalculated.
+						// The reason was av already calculated prior to the loop. While count incremented, the variable  
+						// av was static at  NaN(Not a Number). The only thing that reruns is the loop. Everything else prior is not
+						// recalculated.
   			if(count == 1)
   			{
 				System.out.print("You have entered 0 as your first initial variable.");  
