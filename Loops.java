@@ -1,0 +1,127 @@
+import java.util.*;
+
+/*
+The Key thing about for loops is that the outer loop runs once the initiatized variable is static until the inner for loops finish.
+The outer loop 'for(int outLoop = 1; outLoop <= answer; outLoop++)' engages once(Because the condition is met unless answer = 0), then the 
+first inner loop 'for(int innerLoop = answer; innerLoop >= outLoop; innerLoop--)' starts. This loop is conditional on the outer loop with the 
+statement 'innerLoop >= outLoop'. In our example, answer is equal to 8, and the FIL(first inner loop) will continue to decrement the value innerLoop until
+innerLoop equals 0. The commands within the programming body provide the spaces the give the appearance of a pyramid.
+
+The SIL 'for(int num = outLoop; num >= 1; num--)' provides use with the first half of the pyramid. But why num = outLoop? Because we want the middle to be 1. 
+If we started num at another number, say 5, then we would run into the problem getting "5 4 3 2 1" on the first line instead of just 1.
+As the outerLoop increments, the output produced by this loop also increments. For outLoop = 2, this loop produces '2 1'. At 2, the output
+looks like '1'  and it will proceed until the outerloop is equal to 'answer'.
+	  '2 1'
+	  
+	
+The TIL 'for(int num1 = 2; num1 <= outLoop; num1 ++)' starts at 2 because the first part of the pyramid, provided by SIL, provides '1'. This for loop does
+not run the first time because num1 is greater than outLoop(This means that num1 does not increment). Why not run it and set num1 = 1? Because if we were to run it we would have
+an output that would add an extra column of 1s:
+"
+                   		1   1   
+                            2   1   1   2   
+                        3   2   1   1   2   3   
+                    4   3   2   1   1   2   3   4   
+                5   4   3   2   1   1   2   3   4   5   
+            6   5   4   3   2   1   1   2   3   4   5   6   
+        7   6   5   4   3   2   1   1   2   3   4   5   6   7   
+    8   7   6   5   4   3   2   1   1   2   3   4   5   6   7   8   
+"
+
+We do not want that extra column containing just 1s, so we start this for loop at 2. This loop produces the second part of the pyramid(See output below). Notice
+we do not set num1 equal to outLoop and instead we use the outLoop in the conditional statement. Why? The reason is we need to have the 
+second part of the pyramid to symmetric with first. Since we start counting at 2, the condition checks to see if num1 is less than outLoop.
+If true, then num1 is incremented until the condition 'num1 <= outLoop' is no longer met. This prints out the ascending numbers, 2 - 8, depending on the condition
+(The FIL is dependent on the answer, thus the output of the TIL is affected). 
+
+
+
+Just a side note, let's say we change num1 = outloop and make the condition 'num1 <=8' with an input of 8. The output would be:
+
+'
+                                1   1   2   3   4   5   6   7   8   
+                            2   1   2   3   4   5   6   7   8   
+                        3   2   1   3   4   5   6   7   8   
+                    4   3   2   1   4   5   6   7   8   
+                5   4   3   2   1   5   6   7   8   
+            6   5   4   3   2   1   6   7   8   
+        7   6   5   4   3   2   1   7   8   
+    8   7   6   5   4   3   2   1   8                                 '
+    
+Great for producing a parallelogram!
+
+
+
+
+
+
+
+*/
+public class Main
+{
+	
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+	
+		System.out.println("Please enter an integer: ");
+		int answer = input.nextInt();
+		input.nextLine();
+		for(int outLoop = 1; outLoop <= answer; outLoop++)
+		{
+			for(int innerLoop = answer; innerLoop >= outLoop; innerLoop--)// we need this to be equal to input because the space are reduced as the pyramid descends
+			{
+				System.out.print("    ");
+			
+			}
+			for(int num = outLoop; num >= 1; num--) // Need this equal to outer loop because we want all the numbers in to be the same in their respective columns with 1 at the center of pyramid
+			{
+				System.out.print(num + "   ");
+							
+			
+			}
+		
+			for(int num1 = 2; num1 <= outLoop; num1 ++) // Num1 needs to be equal to 2 in order to have the columns on the right descend properly 
+			{
+			
+				System.out.print( num1 + "   ");
+					
+			}
+			System.out.println();
+		}
+/*
+	Output for input of 8
+	Please enter an integer: 
+ 		8
+		
+		
+  (This is the 2nd for loop)  ← 1 | 
+                            2   1 |  2   → all columns have the same number(Last for loop) 
+                        3   2   1 |  2   3   
+                    4   3   2   1 |  2   3   4   
+                5   4   3   2   1 |  2   3   4   5   
+            6   5   4   3   2   1 |  2   3   4   5   6   
+        7   6   5   4   3   2   1 |  2   3   4   5   6   7   
+    8   7   6   5   4   3   2   1 |  2   3   4   5   6   7   8   
+	                          ↓
+The barrier separates the	← ↓ → The final loop produces the second part of the pyramid starting from 2	
+first two loops from the last loop	
+	
+	
+	
+	
+	
+	
+*/
+	
+	
+	
+	
+	
+	
+	
+	}
+	
+
+
+}
