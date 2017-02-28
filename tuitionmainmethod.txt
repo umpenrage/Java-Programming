@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main
+{
+
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		file1 calculation = new file1();
+		System.out.println("What is the current tuition?");
+		double tuition = input.nextDouble();
+		double DoubleTuition = (2*tuition);
+		input.nextLine();
+		System.out.println("What is the estimate increase?");
+		double rate = input.nextDouble();
+		input.nextLine();
+		double Tuition1, Rate1, DoubleTuition1;
+		System.out.println("Compare another university tuition, i.e. Harvard\n Please input the current tuition:");
+		Tuition1 = input.nextDouble();
+		DoubleTuition1 = (2*Tuition1);
+		System.out.println("Input the estimated rate of tuition increase:");
+		Rate1 = input.nextDouble();
+		input.nextLine();
+		int count = 1;
+		calculation.doubletuition(tuition, rate, DoubleTuition,count);
+		count--;
+		calculation.doubletuition(Tuition1,Rate1,DoubleTuition1, count);	
+	  
+	  
+	}
+
+
+
+
+
+}

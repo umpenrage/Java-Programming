@@ -1,0 +1,24 @@
+public class file1
+{
+
+	public void doubletuition(double tuition, double rate, double DoubleTuition, int count)
+	
+	{
+		tuition = tuition;
+		int year = 1;
+		while(tuition <DoubleTuition)
+		{
+			
+			System.out.printf("$ %5.2f \t\t Year %d\n",tuition,year );
+			tuition = tuition*(1+rate);
+			year++;
+			
+			
+		}
+		
+		while(count >0){
+		  System.out.println("Other University");
+		  count--;
+		}
+	}
+}
