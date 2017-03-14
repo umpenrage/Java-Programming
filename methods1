@@ -1,0 +1,32 @@
+class Main {
+  public static void main(String[] args) {
+   sayHelloTo(" Name ");
+   int x = returnFive();
+   System.out.println(x);
+   int result = square(returnFive());//We can use methods with other methods, as long as they are the same type cast. 
+   System.out.println(result);
+    
+  }
+  
+  static int square(int x)
+  {
+    return x*x;
+  }
+  // Method that returns a value of '5'
+  static  int returnFive()
+  {
+    return 5;
+  }
+  //Will say hello to what ever name is passed when called
+  static void sayHelloTo(String name)
+  {
+    System.out.println("Hello" + name);
+  }
+  // This method simply states 'hello world'
+  static void sayHelloWorld()
+  {
+    System.out.println("Hello World");
+  }
+  
+  
+}

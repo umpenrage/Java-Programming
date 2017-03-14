@@ -1,0 +1,54 @@
+public class file1
+{
+  
+  private int day;
+  private int month;
+  private int year;
+  
+  public file1(int m, int d, int y)//Constructor allows us to input default values without having to use set & get methods
+  {
+    month = m;
+    day=d;
+    year= y;
+  }
+  
+  public int getMonth() //accessor() getters (obtains the value of Month)
+  {
+    return month;
+  }
+  public void setMonth(int m) // setter(mutation) States what month is equal to.
+  {
+    month = m;
+    if(month >= 1 && month<= 12)
+    {month = m;}
+    else{System.out.println("Invalid entry");}
+  }
+  
+  public int getDay()
+  {
+    return day;
+  }
+
+  public void setDay(int day1){
+    day = day1;
+  }
+  
+  public int getYear(){
+    return year;
+  }
+  
+  public void setYear(int year1){
+    year = year1;
+  }
+  
+  public String toString() //returns a string that represents the object that you have
+  {
+    String result;
+      result = month + "/" + day +"/"+ year;//Provides the format for a particular object. Converts the object inputs into a string
+    return result;
+  }
+
+  
+  
+  
+}

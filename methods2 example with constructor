@@ -1,0 +1,15 @@
+import java.util.*;
+class Main {
+  public static void main(String[] args)
+  {
+    file1 otherBirth = new file1(12,3,2009);//After we create a custom constructor, we can input values without the use of set & gets
+  // file1 birthday = new file1(); // Originally we had a blank constructor, and we needed a way to fill in the values
+  //  birthday.setMonth(11);  //We use setMonth to set the month. We need this because the month variable in file1.java is private
+  //  birthday.setYear(2009);
+  //  birthday.setDay(31);
+   
+    
+   // System.out.println(birthday.getMonth() + "/" +birthday.getDay() + "/" + birthday.getYear());// to obtain the value we created a get variable(i.e getMonth)
+    System.out.println(otherBirth);//Using otherBirth.toString() provides the same results, but you do not need to use the toString method because it is enacted by default(?Maybe)
+  } 
+}
