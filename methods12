@@ -1,0 +1,24 @@
+package javaapplication1;
+
+
+public class methods12 extends superclassmethod {
+      double numer;
+      int years;
+      double denom;
+    public double numerator(double loan, double monthlyrate){
+        numer= loan*monthlyrate;
+        
+        return numer;
+    }
+    public double denominator(double monthrate){
+        denom = (1-(1/(Math.pow(1+monthrate,years*12))));
+        
+        return denom;
+    }
+    
+    void printLoanPayment(){
+        double montpay = numer/denom;
+        System.out.printf("Your monthly payment is %.2f", montpay);
+        System.out.println();
+    }
+}

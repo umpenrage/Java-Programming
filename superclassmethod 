@@ -1,0 +1,13 @@
+
+package javaapplication1;
+
+public class superclassmethod {
+      double mrate; 
+    
+    public double rate(double int1){
+        mrate = int1/1200; //divides by 1200 because most people would enter the actual percentage. 
+        
+        return mrate;
+    }
+    
+}

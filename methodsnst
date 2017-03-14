@@ -1,0 +1,27 @@
+
+package javaapplication1;
+import java.util.*;
+
+public class methodsnst {
+   
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        methods12 montpay = new methods1();
+        System.out.println("What is the loan amount? ");
+        double loanamount = input.nextDouble();
+        System.out.println("What is the interest rate, i.e. '3.375'? ");
+        double rate = input.nextDouble();
+        System.out.println("What is the length of the loan? ");
+        int length = input.nextInt();
+        montpay.years = length;
+        montpay.rate(rate);
+        montpay.denominator(montpay.mrate);
+        montpay.numerator(loanamount, montpay.mrate);
+        montpay.printLoanPayment();
+
+        
+        
+        
+    }
+    
+}
