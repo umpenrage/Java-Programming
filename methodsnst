@@ -2,7 +2,7 @@
 package javaapplication1;
 import java.util.*;
 
-public class methodsnst {
+public class Main {
    
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
@@ -15,8 +15,8 @@ public class methodsnst {
         int length = input.nextInt();
         montpay.years = length;
         montpay.rate(rate);
-        montpay.denominator(montpay.mrate);
-        montpay.numerator(loanamount, montpay.mrate);
+        montpay.denominator(montpay.getMrate());
+        montpay.numerator(loanamount, montpay.getMrate());
         montpay.printLoanPayment();
 
         
