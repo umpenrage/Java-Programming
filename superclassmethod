@@ -1,0 +1,24 @@
+
+package javaapplication1;
+
+public class superclassmethod {
+    private double mrate; 
+    
+    public double file3(double int1){
+         
+       if(int1 < 1){
+         mrate = int1/12;
+         
+       } 
+       else{
+         mrate = int1/1200;
+       }
+        return mrate; //divides by 1200 because most people would enter the actual percentage.
+        
+        
+    }
+    
+    public double getMrate(){
+      return mrate;
+    }
+}
