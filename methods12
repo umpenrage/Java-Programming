@@ -2,23 +2,37 @@ package javaapplication1;
 
 
 public class methods12 extends superclassmethod {
-      double numer;
-      int years;
-      double denom;
+  
+    private  double numer;
+    private  double denom;
+    private double totPay;
+    private double monthpay;
+    
     public double numerator(double loan, double monthlyrate){
         numer= loan*monthlyrate;
         
         return numer;
     }
+   
     public double denominator(double monthrate){
-        denom = (1-(1/(Math.pow(1+monthrate,years*12))));
+        denom = (1-(1/(Math.pow(1+monthrate,getYears()*12))));
         
         return denom;
     }
-    
-    void printLoanPayment(){
-        double montpay = numer/denom;
-        System.out.printf("Your monthly payment is %.2f", montpay);
+     void printLoanPayment(){
+        monthpay = numer/denom;
+        System.out.printf("Your monthly payment is %,.2f", monthpay);
+        System.out.println();
+        
+        System.out.printf("The amount you will have paid at maturity is %,.2f", totalPayment());// the ',' allows for comma output
         System.out.println();
     }
+    
+    public double totalPayment(){
+      totPay = monthpay*getYears()*12;
+      return totPay;
+    }
+    
+   
+    
 }
