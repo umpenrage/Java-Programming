@@ -3,6 +3,7 @@ package javaapplication1;
 
 public class superclassmethod {
     private double mrate; 
+    private  int years; 
     
     public double file3(double int1){
          
@@ -17,7 +18,14 @@ public class superclassmethod {
         
         
     }
+    public int setYears(int yrs){
+      years = yrs; 
+      return years;
+    }
     
+    public int getYears(){
+      return years;
+    }
     public double getMrate(){
       return mrate;
     }
