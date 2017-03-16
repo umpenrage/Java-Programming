@@ -2,26 +2,29 @@
 package javaapplication1;
 import java.util.*;
 
+
 public class Main {
    
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        methods12 montpay = new methods1();
+        file1 montpay = new file1();
+        
         System.out.println("What is the loan amount? ");
         double loanamount = input.nextDouble();
         System.out.println("What is the interest rate, i.e. '3.375'? ");
         double rate = input.nextDouble();
-        System.out.println("What is the length of the loan? ");
+        System.out.println("How many years is the loan? ");
         int length = input.nextInt();
-        montpay.years = length;
-        montpay.rate(rate);
+        input.nextLine();
+        montpay.setYears(length);
+        
+        montpay.file3(rate);
         montpay.denominator(montpay.getMrate());
         montpay.numerator(loanamount, montpay.getMrate());
         montpay.printLoanPayment();
-
+        
         
         
         
     }
-    
 }
