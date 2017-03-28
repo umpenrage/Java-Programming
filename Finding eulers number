@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Main{
+
+	public static void main(String[] args){
+	
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("This program will calculate e :");
+		Main factorial = new Main();
+		factorial.returnFact();
+	}
+	  public void returnFact(){
+			double e=1;
+			double fact=1;
+			//eulers summation is 1/n! from a lower bound to an upper bound. The equation can also be 1/(N(N-1)!).
+			for(double i=1; i<=100000; i++){
+				fact*=i; // fact = fact*i;// multiplies fact by i to obtain the factorial of i
+				e+=1/fact;  //This portion adds the previous e variable to the new 1/fact to obtain a closer approximation to e.  
+			 
+			 if(i==10000){
+		      System.out.println("When i is " + i + " e is "+ e); // there is a data limitation. After a certain amount, java will round off the value of e
+		      continue;
+			 
+		}
+		}
+			 
+			 
+		}
+			
+}
+		
