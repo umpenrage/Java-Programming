@@ -1,0 +1,26 @@
+
+package MoreStudy;
+import java.util.Scanner;
+
+public class firstclass {
+    
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("This will display the output of PI\nThe user input will determine the amount of iterations\nPlease input an integer for the interations desired");
+        int user= input.nextInt();
+                double factor=0;
+        for(int i=1; i<=user; i++){
+            factor+=(Math.pow((-1),i+1))/((2*i)-1);
+            
+            if(i==user){
+                double pi=4*factor;
+                System.out.println("PI equals " + pi + " after " + user +" interations");
+                break;
+            }    
+            
+        }
+        
+        
+    }
+    
+}
