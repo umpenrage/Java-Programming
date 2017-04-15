@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 public class LoanAmortization
@@ -25,15 +26,15 @@ public class LoanAmortization
 		monpay = (loan * mrate)/(1-(1/Math.pow(1 + mrate, yrs*12)));
 		totalpay= monpay * yrs * 12;
 		double balance = loan;
-		System.out.printf("Monthly Payment : %3.2f \nTotal Payment : %3.2f \nMonthly Interest %.5f\n",monpay,totalpay,mrate);
-		System.out.println("Payment# \t\t Interest \t\t Principal \t\t Balance");
+		System.out.printf("Monthly Payment : %,5.2f \nTotal Payment : %,5.2f \nMonthly Interest %.5f\n",monpay,totalpay,mrate);
+		System.out.println("Payment# \t\t Interest \t\t\t Principal \t\t\t Balance");
 	  
 		for (int i = 1; i <= yrs * 12; i++)
 		{
 		  double interest = mrate * balance;
 		  double principal = monpay - interest;
 		  balance = balance  - principal;
-		  System.out.printf("%d \t\t\t %3.2f \t\t\t  %3.2f \t\t %3.2f", i, interest, principal, balance);
+		  System.out.printf("%2d \t\t\t%,8.2f\t\t\t%,8.2f\t\t\t%,8.2f", i, interest, principal, balance);
 		  System.out.println();
 		  
 		}
