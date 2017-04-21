@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args){
+		// ↓Allows for java to recognize computer keyboard input
+		Scanner input = new Scanner(System.in);
+		//↓ declares variables
+		double length1, length2, length3;
+		double perimeter;
+		
+		System.out.println("Please provide the three lengths in order to calculate the perimeter of a triangle :");
+		length1 = input.nextDouble();//all three initialize variables
+		length2 = input.nextDouble();
+		length3 = input.nextDouble();
+		perimeter=length1 + length2 + length3;
+		input.nextLine();//avoids consumption of possible newline character
+			if(length1+length2>length3 && length2+length3>length1 && length3 + length1>length2){
+			//↑TESTS TO SEE IF EVERY 2 LENGTHS ARE GREATER THAN THE REMAINING LENGTH
+				System.out.println("Valid input\nThe perimeter is " + perimeter);
+			
+			}
+			else{
+			System.out.println("Invalid input");/*CAUSED BECAUSE 2 LENGTHS ADDED TOGETHER WERE NOT GREATER
+															THAN THE REMAINING*/
+			}
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	}
+
+
+
+
+
+}
