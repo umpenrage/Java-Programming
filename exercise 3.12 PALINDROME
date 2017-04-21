@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+
+public class Main{
+
+
+	public static void main(String[] args){
+	
+		Scanner input = new Scanner(System.in); // creates input object 
+		System.out.println("please input a 3 digit integer: ");
+		int number = input.nextInt(); //user input
+		input.nextLine(); // common practice in order to prevent a line consumption assuming we have another input request
+			System.out.println("This program will determine if your number is a palindrome");
+			if(number>999 || number <100){
+				System.out.println("Incorrect range");
+				
+			}
+			else if(number>=100 && number<=999){ 
+			
+			  if(number/100 == number%10){ 
+				  /* The first argument is integer division, so the demical is moved two places to the left and the remainder is discarded.
+				    The second argument is divided by 10, but we keep the remainder hence the %. Why? The remainder is what is left over that cannot be represented by whole numbers. Keep in mind we are checking to see if the hundredths and ones place are the same. If they match, then the number is a palindrome. 
+				
+				  */
+				System.out.println("Your number is a palindrome");
+			  }
+				else{
+		  	      System.out.println("Your number is not a palindrome");
+			      }
+			}
+		
+	
+	
+	}
+
+
+}
