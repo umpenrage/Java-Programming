@@ -12,11 +12,13 @@ public class Main{
     y1 = input.nextDouble();
     if(Main.getdistance(x1,y1)<=RADIUS){
       //↑ tests to see if the point is within the circle
-      if(Main.getdistance(x1,y1)==RADIUS){
-        System.out.print("Point (" + x1+ " , "+ y1+") is on the border of the circle");
-      }else{
-      System.out.println("Point (" +x1+","+y1+") is in the circle");}
-      
+		if(Main.getdistance(x1,y1)==RADIUS){
+			System.out.print("Point (" + x1+ " , "+ y1+") is on the border of the circle");
+		}
+		else{
+			System.out.println("Point (" +x1+","+y1+") is in the circle");
+		}
+     
     }else{
       System.out.println("Point (" +x1+","+y1+") is not within the circle");
     }
