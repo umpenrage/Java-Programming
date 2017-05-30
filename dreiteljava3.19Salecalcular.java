@@ -106,7 +106,7 @@ public class Main{
               totalPay4=200 + commission;
               break;  
           
-        }
+        }// ends switch statement
         
         
         System.out.println("Would you like to rerun this to input values for another employee? Type 1 for Yes and 2 for No");//Gives user the option to rerun the program for a different employee or the same employee.
