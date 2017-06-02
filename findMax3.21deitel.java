@@ -22,35 +22,35 @@ public class Main{
 			long answer = input.nextLong();
 			switch(counter){
 				case 1: 
-							input1=answer;
-							break;
+					input1=answer;
+					break;
 				case 2: 
-							input2=answer;
-							break;
+					input2=answer;
+					break;
 				case 3: 
-							input3=answer;
-							break;
+					input3=answer;
+					break;
 				case 4: 
-							input4=answer;
-							break;
+					input4=answer;
+					break;
 				case 5: 
-							input5=answer;
-							break;
+					input5=answer;
+					break;
 				case 6: 
-							input6=answer;
-							break;
+					input6=answer;
+					break;
 				case 7: 
-							input7=answer;
-							break;
+					input7=answer;
+					break;
 				case 8: 
-							input8=answer;
-							break;
+					input8=answer;
+					break;
 				case 9: 
-							input9=answer;
-							break;
+					input9=answer;
+					break;
 				case 10: 
-							input10=answer;
-							break;
+					input10=answer;
+					break;
 			
 							
 			} //end switch case statement
@@ -65,32 +65,32 @@ public class Main{
 			        comparison=input1;
 			        break;
 				case 2: 
-							comparison=input2;
-							break;
+					comparison=input2;
+					break;
 				case 3: 
-							comparison=input3;
-							break;
+					comparison=input3;
+					break;
 				case 4: 
-							comparison=input4;
-							break;
+					comparison=input4;
+					break;
 				case 5: 
-							comparison=input5;
-							break;
+					comparison=input5;
+					break;
 				case 6: 
-							comparison=input6;
-							break;
+					comparison=input6;
+					break;
 				case 7: 
-							comparison=input7;
-							break;
+					comparison=input7;
+					break;
 				case 8: 
-							comparison=input8;
-							break;
+					comparison=input8;
+					break;
 				case 9: 
-							comparison=input9;
-							break;
+					comparison=input9;
+					break;
 				case 10: 
-							comparison=input10;
-							break;
+					comparison=input10;
+					break;
 				
 			}
 			if(comparison>MAX){
@@ -99,7 +99,8 @@ public class Main{
 			comparisonCounter++;
 		} //end of whileloop
 		
-		System.out.println("The max number is " + MAX);
+		System.out.printf("The max number is %,d", MAX);
+		System.out.println();
 		
 	}//end of main methody
 }// end of class
