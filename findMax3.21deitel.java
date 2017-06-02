@@ -4,6 +4,7 @@ public class Main{
 	
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
+		// declares the input variables along with counter variables and the max variable
 		long input1=0;
 		long input2=0;
 		long input3=0;
@@ -15,13 +16,13 @@ public class Main{
 		long input9=0;
 		long input10=0;
 		int counter=1;
-		int comparisonCounter=2;
-		long MAX;
-		while(counter <=10){
+		int comparisonCounter=1;
+		long MAX = 0;
+		while(counter <=10){//Used to assign inputs to their respective input variables
 			System.out.println("Please input an integer for number " + counter);
 			long answer = input.nextLong();
-			switch(counter){
-				case 1: 
+			switch(counter){ // the counter variable is used to help assign the inputs to the correct variable
+				case 1: // on the first run the first number entered will be assigned to variable input1. the same concept follows for the rest.
 					input1=answer;
 					break;
 				case 2: 
@@ -57,13 +58,13 @@ public class Main{
 			counter++;
 		}// end while loop
 		
-		MAX = 0;
-		while(comparisonCounter<=10){
-			long comparison=0;
-			switch(comparisonCounter){
-			  case 1:
-			        comparison=input1;
-			        break;
+		 
+		while(comparisonCounter<=10){//this loop will compare each number to the variable max. if the number is greater than max, then max is assigned that number. 
+			long comparison=0; // intializes the comparison number
+			switch(comparisonCounter){// much like above
+			  	case 1:
+			        	comparison=input1;
+			        	break;
 				case 2: 
 					comparison=input2;
 					break;
