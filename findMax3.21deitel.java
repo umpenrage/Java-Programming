@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Main{
@@ -63,8 +64,8 @@ public class Main{
 			long comparison=0; // intializes the comparison number
 			switch(comparisonCounter){// much like above
 			  	case 1:
-			        	comparison=input1;
-			        	break;
+			        comparison=input1;
+			        break;
 				case 2: 
 					comparison=input2;
 					break;
@@ -98,7 +99,7 @@ public class Main{
 				MAX=comparison;
 			}
 			comparisonCounter++;
-		} //end of whileloop
+		} //end of whileloop that gives the max number
 		
 		System.out.printf("The max number is %,d", MAX);
 		System.out.println();
