@@ -1,0 +1,55 @@
+/*
+this program will determine whether or not a number is a perfect number meaning its factors sumed equals the number inputted
+
+create input variable
+
+prompt user for number
+
+intialize sumVariable
+
+call method getfactors
+
+if 
+sumVariable= number 
+print out "Perfect Number"
+
+else
+	
+
+
+
+
+
+int method getfactors
+
+for loop 1 to inputted number(non-inclusive)
+
+	obtains the factors for the inputted number using a for loop
+
+	intialize int factor variable = number/loop controller variable
+	
+	call summation method with factor variable 
+
+end for loop 
+
+int method summation (factor)
+
+	will add factors together
+	sumVariable += factor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
