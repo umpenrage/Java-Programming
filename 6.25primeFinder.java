@@ -14,7 +14,7 @@ package javaapplication1;
 public class PrimeFinder {
 
     private static int howManyNums;
-//since the loop variable used to calculate the prime numbers is within the isPrime method, we cannot access any variables from isPrime method in the main method. the solution I found was to make a class variable to count the amount of numbers used in the isPrime method. To no ones surprise, n/2 takes 24,985,002  to calculate prime numbers from 2 to 10000. the sqrt(n) takes ~650,000 needed to calculate prime numbers. 
+//since the loop variable used to calculate the prime numbers is within the isPrime method, we cannot access any variables from isPrime method in the main method. the solution I found was to make a class variable to count the amount of numbers used in the isPrime method. To no ones surprise, n/2 takes 24,985,002  to calculate prime numbers from 2 to 10000. the sqrt(n) takes ~650,000.
     public static void main(String[] args){
         int primeCounter=0;
         
