@@ -48,7 +48,5 @@ public class PrimeFinder {
         }
         return prime != 1; 
     }
-    public static int howManyNumbers(int i){
-        return i;
-    }
+ 
 }
