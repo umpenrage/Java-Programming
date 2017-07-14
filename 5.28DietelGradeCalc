@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Main{
+  static int counter=0;
+  public static void main(String[] args){
+    double sum = Main.sumCal();
+    double average=Main.averageCalc(sum, counter);
+    System.out.printf("The student's average grade is %,.2f%%\n ", average);
+    Main.pointPrint(average);
+  }
+  public static double sumCal(){
+    double sum =0;
+    double entry=0;
+   
+    Scanner input = new Scanner(System.in);
+    while(entry !=-1){
+      sum += entry;
+      System.out.println("Please input the student's grade");
+      entry = input.nextDouble();
+      counter += (entry == -1) ? 0 : 1;
+      
+     }
+    return sum;
+    
+  }
+  public static double averageCalc(double sum, int counter){
+    double average = sum/counter;
+    
+    return average;
+  }
+  
+  public static void pointPrint(double average){
+    int grade= (int)(average)/10;
+    switch(grade){
+      case 10: System.out.println("This student has a 4 and is an A student ");
+          break;
+      case 9: System.out.println("This student has a 4 and is an A student ");
+          break;
+      case 8: System.out.println("This student has a 3 and is a B student ");
+          break;
+      case 7: System.out.println("This student has a 2 and is a C student ");
+          break;
+      case 6: System.out.println("This student has a 1 and is a D student ");
+          break;
+      default: System.out.println("This student has 0 and is an f student ");
+    }
+  }
+  
+}
