@@ -1,41 +1,49 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package javaapplication1;
 
-
-/**
- *
- * @author Mark
- */
-public class ArrayPractice {
+public class Main{
 
     public static void main(String[] args){
-    int[] sales = {250,300,6000,0 ,0 , 0 , 0, 0 , 0 , 40000};
+    int[] sales = {250,300,6000,5600 ,10000 , 2500 , 1500, 6300 , 54000 , 40000};
     //int[] salary = new int[10];
     int[] frequency = new int[11];
     for( int i = 0 ; i<sales.length; i++){
         int saleVariable = sales[i];
-        int SalaryVariable = ArrayPractice.salaryMethod(saleVariable);
+        int SalaryVariable = salaryMethod(saleVariable);
        
         switch(SalaryVariable){
             case 2: frequency[SalaryVariable]++;
                     break;
             case 3: frequency[SalaryVariable]++;
                     break;
+            case 4: frequency[SalaryVariable]++;
+                    break;
+            case 5: frequency[SalaryVariable]++;
+                    break;
+            case 6: frequency[SalaryVariable]++;
+                    break;
             case 7: frequency[SalaryVariable]++;
+                    break;
+            case 8: frequency[SalaryVariable]++;
+                    break;
+            case 9: frequency[SalaryVariable]++;
                     break;
             case 10: frequency[SalaryVariable]++;
                     break;
         }
        
     }
+
+    System.out.println("Salary Range \t Number of People");
     for(int j = 2 ; j<frequency.length; j++){
-        System.out.printf("For element %d the frequency is %d", j, frequency[j]);
-        System.out.println();
-    }    
+        for(int k = j; k<=j; k++){
+            if(k==10){
+            System.out.printf("$%,d & over\t\t",1000);
+            }else{
+              System.out.printf("$%d00-$%d99\t\t", k, k);
+            }
+            System.out.printf("%d", frequency[j]);
+            System.out.println();
+        } 
+    }
     
     
     }
