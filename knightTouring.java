@@ -10,7 +10,8 @@ public class Main{
     public static int vMove;
     public static int successfulMoves = 0;
   public static void main(String[] args){
-    
+   
+   
     boolean isOver = false; 
     populateArray();//populates array with default values
     startPosition[0]= (int)(Math.random()*BOARD_SIZE);//sets the initial row
@@ -21,8 +22,10 @@ public class Main{
     }
     //check if all blocks are filled after each
     displayGrid();
+    System.out.println("The amount of runs were "+ successfulMoves);
     
   }
+  
   
   public static boolean areBlocksFilled(){//determines whether or not the blocks/cells are filled
     boolean blocksRFilled = true;
@@ -50,7 +53,7 @@ public class Main{
   
   public static boolean getMove(){
     int badMoveCounter=0;
-    int[] badMoves= new int[BOARD_SIZE];//captures values of bad moves
+    int[] badMoves= {-1,-1,-1,-1,-1,-1,-1,-1};//captures values of bad moves, need to have values because all arrays are initialized to 0. Why did this fail???
     while(badMoveCounter<8){
       int randomMove = (int)(Math.random()*BOARD_SIZE);
       hMove = startPosition[0]+ xMoves[randomMove];
@@ -60,6 +63,7 @@ public class Main{
         moves[hMove][vMove]=notAvailable;
         startPosition[0]=hMove;
         startPosition[1]=vMove;
+        successfulMoves++;
       }else{
         //check if the move is already in bad moves, if it is then the move was already made. 
         boolean moveAlreadyMade = false;
