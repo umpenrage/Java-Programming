@@ -37,10 +37,7 @@ public class Main{
       
       int total2 = getColumnSum(product, i, k);
       System.out.printf("\t %-,1d", total2);
-      k++;
-      if(k==product.length-1){
-        k=0;
-      }
+      
     }
   }
 
@@ -50,7 +47,7 @@ public class Main{
 	  int column = k;
 	  for(int row=i ; row<array[row].length; row++){
 	    total += array[row][column];
-	    
+	    column++;
 	  }
 	    return total;
 
