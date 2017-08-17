@@ -12,7 +12,8 @@ public class Main{
 			
 			
 		}
-		System.out.println("Employee\t\t\t 1\t 2\t 3\t 4\t 5\t\t total");
+		
+		System.out.println("\nEmployee\t\t\t 1\t 2\t 3\t 4\t 5\t\t total");
 		for(int i = 0; i < names.length; i++){
 		  int total = 0;
 		  System.out.printf("%-10S\t\t\t", names[i]);
@@ -29,9 +30,33 @@ public class Main{
 			System.out.println("");
 		
 		}
-		
-		
-	}
+		System.out.print("======================================================================================\n");
+    System.out.printf("%-10S\t\t\t", "Total");
+    int k = 0;
+    for(int i = 0; i<product.length; i++){
+      
+      int total2 = getColumnSum(product, i, k);
+      System.out.printf("\t %-,1d", total2);
+      k++;
+      if(k==product.length-1){
+        k=0;
+      }
+    }
+  }
+
+	
+	public static int getColumnSum(int[][] array, int i , int k){
+	  int total = 0;
+	  int column = k;
+	  for(int row=i ; row<array[row].length; row++){
+	    total += array[row][column];
+	    
+	  }
+	    return total;
+
+  }
+	  
+
 	
 	
 	public static String getName(){//tells user to input names
@@ -41,7 +66,7 @@ public class Main{
 	}
 	
 
-	}
+}
 	
 	
 	
