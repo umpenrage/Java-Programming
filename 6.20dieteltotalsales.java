@@ -30,24 +30,25 @@ public class Main{
 			System.out.println("");
 		
 		}
-		System.out.print("======================================================================================\n");
-    System.out.printf("%-10S\t\t\t", "Total");
+		System.out.print("================================================================================||======\n");
+    System.out.printf("%-10S\t\t", "Total");
     int k = 0;
+    
     for(int i = 0; i<product.length; i++){
       
-      int total2 = getColumnSum(product, i, k);
-      System.out.printf("\t %-,1d", total2);
-      
+      int total2 = getColumnSum(product, k);
+      System.out.printf("\t%-,5d", total2);
+      k++;
     }
   }
 
 	
-	public static int getColumnSum(int[][] array, int i , int k){
+	public static int getColumnSum(int[][] array, int k){
 	  int total = 0;
 	  int column = k;
-	  for(int row=i ; row<array[row].length; row++){
+	  for(int row=0 ; row<array.length;row++){
 	    total += array[row][column];
-	    column++;
+	   
 	  }
 	    return total;
 
