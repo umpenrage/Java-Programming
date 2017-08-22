@@ -45,7 +45,7 @@ public class Fibonacci {
             }
         }// end of if statement
         Fibonacci.calculateNthDigit(answer);
-        System.out.println();       
+              
     }
     
     public static void calculateNthDigit(int input){
