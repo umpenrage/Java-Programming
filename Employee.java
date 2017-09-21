@@ -35,10 +35,9 @@ public class Employee {
     public double getWage(){
         return wage;
     }
-    public void printRaise(double wage){
+    public void setRaise(double wage){
         this.wage = wage*(1.10);
-        System.out.printf("%,.2f", wage);
-        
     }
+    
 }
 
