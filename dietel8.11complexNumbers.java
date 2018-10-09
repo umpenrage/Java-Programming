@@ -1,7 +1,7 @@
 package javaapplication1;
 
 
-public class complexNumbers{
+public class ComplexNumbers{
 	private imaginaryPart1;
 	private imaginaryPart2;
 	private realPart1;
@@ -11,11 +11,11 @@ public class complexNumbers{
 
 
 
-	public complexNumber(){
+	public ComplexNumbers(){
 		this(0,0,0,0);
 	}
 
-	public complexNumber(double realPart1, double imaginaryPart1, double realPart2, double imaginaryPart2){
+	public ComplexNumbers(double realPart1, double imaginaryPart1, double realPart2, double imaginaryPart2){
 			this.realPart1 = realPart1;
 			this.imaginaryPart1	=imaginaryPart1;
 			this.realPart2 = realPart2;
@@ -49,6 +49,6 @@ public class complexNumbers{
 	}
 
 	public toString(){
-		String.format
+		String.format("%10s \t %10s\n%-2f \t %-2fi", "Real ", " Imaginary", realFinal, imaginaryFinal);
 	}
 }
